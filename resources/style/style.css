@@ -135,6 +135,7 @@ p{
 .info__grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
 }
 .pedido-card{
     background-color: var(--gris_claro2);
@@ -145,9 +146,10 @@ p{
 .nombre{
     margin: 2.5rem 0;
 }
-.pedido-card__adornos-flex{
-    display: flex;
-    justify-content: space-around;
+.pedido-card__adornos-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.5rem;
 }
 
 /*Sabores*/
@@ -196,4 +198,24 @@ p{
 .status-disponible{
     color: var(--verde);
     font-weight: 700;
+}
+
+/*Adornos*/
+.a1{
+    background-image: url(../images/adornos/a1.jpg);
+}
+.a2{
+    background-image: url(../images/adornos/a2.jpg);
+}
+.a3{
+    background-image: url(../images/adornos/a3.jpg);
+}
+.a4{
+    background-image: url(../images/adornos/a4.jpg);
+}
+.a5{
+    background-image: url(../images/adornos/a5.jpg);
+}
+.a6{
+    background-image: url(../images/adornos/a6.jpg);
 }
