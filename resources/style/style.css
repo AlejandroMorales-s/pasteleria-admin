@@ -6,14 +6,17 @@
     --primario__hover: #c895d8;
     --blanco: #ffffff;
     --negro: #000; 
-    --gris_claro: #eee;
-    --gris_oscuro: #c4c4c4;
+    --gris_claro2: #eee;
+    --gris_claro: #c4c4c4;
 
     --colorFondo: #101113;
     --colorBotones: #393A3C;
     --colorFondoElementos: #242527;
     --colorText: #FEFEFE;
     --grisClaro: #646567;
+
+    --rojo: #e74c3c;
+    --verde: #2ecc71;
 }
 html{
     font-size: 62.5%;
@@ -31,12 +34,14 @@ body{
 
 /*Globales*/
 .container{
-    max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
+    max-width: 93%;
+    margin-left: 10rem;
+    padding: 0 2.5rem;
 }
-body{
-    background-color: var(--gris_claro);
+.ingredientes-restantes-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2.5rem;
 }
 a{
     text-decoration: none;
@@ -57,11 +62,25 @@ h3{
 h4{
     font-size: 2.8rem;
 }
+h5{
+    font-size: 2rem;
+}
 img{
     max-width: 100%;
 }
 p{
     font-family: var(--fuenteParrafos);
+}
+
+/*Utilidades*/
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
 }
 
 /*Navegacion*/
@@ -75,6 +94,7 @@ p{
     border-right: 1px solid var(--gris_oscuro);
     display: flex;
     flex-direction: column;
+    box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 .barra{
     height: 100%;
@@ -103,4 +123,77 @@ p{
 }
 .--active{
     background-color: var(--primario__hover);
+}
+
+/*Pedidos*/
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem auto;
+}
+.info__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.pedido-card{
+    background-color: var(--gris_claro2);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.5);
+}
+.nombre{
+    margin: 2.5rem 0;
+}
+.pedido-card__adornos-flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Sabores*/
+.card__img{
+    border-radius: 1rem;
+    height: 30rem;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.s1{
+    background-image: url(../images/sabores/s1.jpg);
+}
+.s2{
+    background-image: url(../images/sabores/s2.webp);
+}
+.s3{
+    background-image: url(../images/sabores/s3.jpg);
+}
+.s4{
+    background-image: url(../images/sabores/s4.jpg);
+}
+.s5{
+    background-image: url(../images/sabores/s5.jpg);
+}
+.s6{
+    background-image: url(../images/sabores/s6.jpg);
+}
+.s7{
+    background-image: url(../images/sabores/s7.jpg);
+}
+.s8{
+    background-image: url(../images/sabores/s8.jpg);
+}
+.card__title{
+    margin: 2rem 0;
+}
+.card__status{
+    margin: 0 0 2rem 0;
+}
+.status-no-disponible{
+    color: var(--rojo);
+    font-weight: 700;
+}
+.status-disponible{
+    color: var(--verde);
+    font-weight: 700;
 }
